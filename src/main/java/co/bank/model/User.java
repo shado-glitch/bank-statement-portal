@@ -7,19 +7,14 @@ public class User {
     
     private final String username;
     private final Long userId;
-    private final String passwodHash;
     private final String role;
-    private final Instant createdAt;
+    
 
-    public User(){
-    }
-
-    public User(Long userId, String username, String passwordHash, String role, Instant createdAt){
+    
+    public User(Long userId, String username,  String role){
       this.username=username;
       this.userId= userId;
-      this.passwodHash = passwordHash;
       this.role = role;
-      this.createdAt = createdAt;
     }
 
 
@@ -35,22 +30,13 @@ public class User {
 
 
 
-    public String getPasswodHash() {
-        return passwodHash;
-    }
+    
 
 
 
     public String getRole() {
         return role;
     }
-
-
-
-    public Instant getCreatedAt() {
-        return createdAt;
-    }
-
 
 
     @Override

@@ -7,8 +7,9 @@
 </head>
 <body>
 
-    <h1>Welcome {{}username}</h1>
-    <p>Your total balance: R {{balance}}</p>
-    
+    <h1 th:text="'Hello ' + ${username}">Welcome user</h1>
+    <p>Your total balance: R: 0.00</p>
+
+    <a href="/expenses">Expenses</a>
 </body>
 </html>

@@ -36,9 +36,13 @@ public class BankServer {
             });
         config.fileRenderer(new JavalinThymeleaf(engine));
 
-        Routes.configure(this);
 
         });
+
+
+        Routes.configure(this);
+        
+        
     }
 
     public  void start(int port){
@@ -53,7 +57,7 @@ public class BankServer {
 
     public static void main(String[] args){
         BankServer server = new BankServer();
-        server.start(7070);
+        server.start(7072);
     }
     
 

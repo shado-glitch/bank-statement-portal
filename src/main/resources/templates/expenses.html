@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses - The Black Bank</title>
+</head>
+<body>
+
+    <h1>Expenses Report</h1>
+    <p>Welcome <span th:text="${username}">User</span></p>
+
+    <form method="POST" action="/expenses">
+        <lable>Start Date:</lable>
+        <input type="date" name="startDate" th:value="${startDate}" required>
+        
+        <lable>End Date</lable>
+        <input type="date" name="endDate" th:value="${endDate}" required>
+        <button type="submit">Show expense</button>
+
+    </form>
+
+    <hr>
+    <div th:if="${startDate != null}" >
+        <h2>Showing expenses form <span th:text="${startDate}"></span>to<span th:text="${endDate}" </h2>
+        <p >here will show list of expenses fomr db</p>   
+    </div>
+
+    <a href ="/home">Back Home</a>
+    
+</body>
+</html>

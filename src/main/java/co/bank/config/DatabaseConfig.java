@@ -28,7 +28,7 @@ public class DatabaseConfig {
                 String hash = rs.getString("password_hash");
                 // TEMP: if your hash is plain text '1234', this works. If bcrypt, replace with BCrypt.
                 if (hash.equals(password)) { 
-                    return new User(rs.getLong("user_id"), rs.getString("username"), hash, rs.getString("role"));
+                    return new User(rs.getLong("user_id"), rs.getString("username"), rs.getString("role"));
                 }
             }
         } catch (Exception e) { e.printStackTrace(); }
@@ -48,7 +48,7 @@ public class DatabaseConfig {
                     rs.getString("account_number"),
                     rs.getString("account_type"),
                     rs.getString("currency"),
-                    rs.getBigDecimal("opening_balance")
+                    rs.getDouble("opening_balance")
                 ));
             }
         } catch (Exception e) { e.printStackTrace(); }
